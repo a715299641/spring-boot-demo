@@ -1,0 +1,23 @@
+server:
+  port: 7003
+  address: 127.0.0.1
+spring:
+  application:
+    name: ceshi01
+  datasource:
+    test1:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName : com.mysql.jdbc.Driver
+      url : jdbc:mysql://localhost:3306/spring_cloud01?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull
+      username : root
+      password : root
+  http:
+    multipart:
+      max-file-size: 1024KB
+      max-request-size: 1024KB
+mybatis:
+  mapper-locations: classpath*:com/example/ceshi/ceshi01/mapper/xml/*Mapper.xml
+  type-aliases-package: com.example.ceshi.ceshi01.entity
+  type-handlers-package: com.example.ceshi.ceshi01.entity
+
+
